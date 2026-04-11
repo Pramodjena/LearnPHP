@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#btn{
+    padding: 10px 20px;
+    background-color: blueviolet;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+#btn:hover{
+    cursor: pointer;
+}
+
+#marquee{
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    max-width: 300px;
+}
