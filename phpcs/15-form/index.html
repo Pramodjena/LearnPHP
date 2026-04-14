@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>PHP Form</h1>
+    <div class="conatiner">
+      <h1 class="heading">PHP Form</h1>
+
+      <form action="./data.php" method="post">
+        <label for="name">Username:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter name"
+          autocomplete="off"
+          required
+        />
+        <label for="email">Useremail:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email"
+          autocomplete="off"
+          required
+        />
+        <label for="age">Userage:</label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="Enter age"
+          autocomplete="off"
+          required
+        />
+
+        <label for="course">Usercourse:</label>
+        <select name="course" id="course" autocomplete="off" required>
+          <option value="BCA">BCA</option>
+          <option value="DS">DS</option>
+          <option value="ITM">ITM</option>
+          <option value="CS">CS</option>
+        </select>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   </body>
 </html>
