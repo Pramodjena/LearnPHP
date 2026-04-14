@@ -1,10 +1,19 @@
 <?php
 
 if (isset($_FILES["fileUpload"])) {
-    // print_r($_FILES);
 
-    $fileName = $_FILES["fileUpload"];
-    $path = "./upload" . basename($_FILES["name"]);
-    move_uploaded_file($fileName["tmp_name"], $path) or exit("Failed");
-    echo "File upload";
+    $file = $_FILES["fileUpload"];
+
+    $fileName = $file["name"];
+    $tempName = $file["tmp_name"];
+
+    $path = "./upload/" . basename($fileName);
+
+    if (move_uploaded_file($tempName, $path)) {
+        echo "File uploaded successfully ✅";
+    } else {
+        echo "Upload failed ❌";
+    }
+
+    echo $path;
 }

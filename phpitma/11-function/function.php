@@ -41,9 +41,9 @@
 //     echo $num;
 //     echo "<br>";
 //     print_r($z);
-//     // foreach ($num as $n) {
-//     //     echo "Numbers are: $n <br>";
-//     // }
+    // foreach ($num as $n) {
+    //     echo "Numbers are: $n <br>";
+    // }
 // }
 
 // printNum(5, 6, 8, 546687, 1.0, 2.5555);

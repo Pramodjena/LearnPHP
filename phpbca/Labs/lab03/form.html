@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GET/POST Form | PHP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">GET/POST Form in PHP</h1>
+      <form action="./data.php" method="post">
+        <label for="name">Username:</label>
+        <input type="text" name="name" id="name" placeholder="Enter name" />
+        <label for="email">Useremail:</label>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+        <label for="age">Userage:</label>
+        <input type="number" name="age" id="age" placeholder="Enter age" />
+
+        <label for="course">Usercourse:</label>
+        <select name="course" id="course">
+          <option value="BCA">BCA</option>
+          <option value="CS">CS</option>
+          <option value="ITM">ITM</option>
+          <option value="DS">DS</option>
+        </select>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

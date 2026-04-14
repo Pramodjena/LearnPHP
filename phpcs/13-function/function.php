@@ -61,11 +61,11 @@
 // Strict 
 
 
-declare(strict_types=1);
+// declare(strict_types=1);
 
-function addTwoNum(string $num1, int $num2)
-{
-    return $num1 + $num2;
-}
+// function addTwoNum(string $num1, int $num2)
+// {
+//     return $num1 + $num2;
+// }
 
-echo addTwoNum("1", 5);
+// echo addTwoNum("1", 5);
