@@ -3,12 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial;
    
 }
-
 .container{
     width: 400px;
     margin: 20px auto;
@@ -16,18 +14,15 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     border-radius: 10px;
 }
-
 .container h3{
     text-align: center;
 }
-
 label{
     display: block;
     margin-top: 5px;
     font-weight: bold;
 
 }
-
 input, button {
     width: 100%;
     padding: 8px;
@@ -38,23 +33,18 @@ input, button {
     font-weight: bold;
     border:2px solid #878282;
 }
-
-
-
 button {
     background: blue;
     color: white;
     border: none;
    
 }
-
 header {
     background: blue;
     color: white;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-
 footer p{
    background-color: blue;
    text-align: center;
