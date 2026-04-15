@@ -1,6 +1,6 @@
 <hr>
 <footer>
-    <p>© 2026 StudentHub</p>
+    <p>Copy rights reserved@2026</p>
 </footer>
 </body>
 
