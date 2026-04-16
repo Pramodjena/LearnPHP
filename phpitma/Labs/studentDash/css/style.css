@@ -39,7 +39,7 @@ button {
     border: none;
    
 }
-header {
+nav {
     background: blue;
     color: white;
     padding: 10px;
@@ -52,3 +52,4 @@ footer p{
    padding: 23px;
    color: #fff;
 }
+

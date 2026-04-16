@@ -1,11 +1,4 @@
 <?php
-session_start();
-// echo "File has been shared";
-
-// if (isset($_POST["name"]) && isset($_POST["age"]) && isset($_POST["email"]) && isset($_POST["roll"]) && isset($_POST["course"]) && isset($_POST["college"])) {
-
-
-// }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -16,39 +9,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $course = $_POST["course"];
     $college = $_POST["college"];
 
-    // File Upload 
-    if (isset($_FILES["photo"]) && isset($_FILES["photo"]["error"]) == 0) {
-        $photo = $_FILES["photo"]["name"];
+    // File Upload
+    if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0) {
+
+        $photoName = basename($_FILES["photo"]["name"]);
         $tmp = $_FILES["photo"]["tmp_name"];
 
-        $uploadPath = "upload/";
+        $uploadDir = __DIR__ . "/upload/";   // server path
+        $relativePath = "upload/" . $photoName; // browser path ✅
 
-        // Create folder if not exist 
-        if (!is_dir($uploadPath)) {
-            mkdir($uploadPath, 0777, true);
+        // Create folder if not exists
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
         }
 
-        $path = $uploadPath . basename($photo);
+        // Move file
+        if (move_uploaded_file($tmp, $uploadDir . $photoName)) {
 
-        if (move_uploaded_file($tmp, $path)) {
-            $_SESSION["photo"] = $path;
+            // Store ONLY relative path in cookie ✅
+            setcookie("photo", $relativePath, time() + 3600);
         } else {
             echo "File Upload failed !!!";
             exit();
         }
     } else {
-        echo "No file selected or uploaded";
+        echo "No file selected";
         exit();
     }
 
-
-    // session set 
-    $_SESSION["name"] = $name;
-
-    // Cookie 
+    // Store user in cookie
     setcookie("user", $name, time() + 3600);
-
-    // Redirect 
+    include("./include/footer.php");
+    // Redirect
     header("Location: dashboard.php");
     exit();
 }
