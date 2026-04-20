@@ -49,6 +49,17 @@ if (isset($_POST["file"])) {
 }
 
 
+
+// Read multiple files inside one folder :
+
+// $path = __DIR__;
+// $items = scandir($path);
+// $items = array_diff($items, array(".", ".."));
+// foreach ($items as $item) {
+    // echo "<a href='$path'>$item</a>" . "<br>";
+//     echo $item . "<br>";
+// }
+
 ?>
 
 <form action="" method="post">
